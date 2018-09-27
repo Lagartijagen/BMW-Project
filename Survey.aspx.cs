@@ -59,7 +59,7 @@ public partial class _Default : Page
             else if (_age > 0 && _age < 18)
             {
                 SwitchPlaceHolder(PlaceHolder1, PlaceHolder9);
-                ScriptManager.RegisterClientScriptBlock(Page, Page.GetType(), "text", "StoreValue('adolescents', 1)", true);               
+                ScriptManager.RegisterStartupScript(Page, Page.GetType(), "text", "StoreValue('adolescents', 1)", true);               
             }
             else
             {
@@ -107,7 +107,7 @@ public partial class _Default : Page
             else
             {
                 SwitchPlaceHolder(PlaceHolder3, PlaceHolder9);
-                ScriptManager.RegisterClientScriptBlock(Page, Page.GetType(), "text", "StoreValue('unlicensed', 1)", true);
+                ScriptManager.RegisterStartupScript(Page, Page.GetType(), "text", "StoreValue('unlicensed', 1)", true);
             }           
         }
         else
@@ -125,12 +125,12 @@ public partial class _Default : Page
             ScriptManager.RegisterClientScriptBlock(Page, typeof(Page), "ClientScript",
                 "alert('We are targeting more experienced clients, thank you for your interest')", true);
             SwitchPlaceHolder(PlaceHolder4, PlaceHolder9);
-            ScriptManager.RegisterClientScriptBlock(Page, Page.GetType(), "text", "StoreValue('firstTimers', 1)", true);
+            ScriptManager.RegisterStartupScript(Page, Page.GetType(), "text", "StoreValue('firstTimers', 1)", true);
         }
         else if (Q4DropDownList.SelectedValue == "2") 
         {
             SwitchPlaceHolder(PlaceHolder4, PlaceHolder5);
-            ScriptManager.RegisterClientScriptBlock(Page, Page.GetType(), "text", "StoreValue('targetables', 1)", true);
+            ScriptManager.RegisterStartupScript(Page, Page.GetType(), "text", "StoreValue('targetables', 1)", true);
         }
         else
         {
@@ -147,15 +147,15 @@ public partial class _Default : Page
             SwitchPlaceHolder(PlaceHolder5, PlaceHolder6);
             if (Q5DropDownList.SelectedValue == ("1"))
             {
-                ScriptManager.RegisterClientScriptBlock(Page, Page.GetType(), "text", "StoreValue('FWD', 1)", true);
+                ScriptManager.RegisterStartupScript(Page, Page.GetType(), "text", "StoreValue('FWD', 1)", true);
             } 
             else if (Q5DropDownList.SelectedValue == ("2"))
             {
-                ScriptManager.RegisterClientScriptBlock(Page, Page.GetType(), "text", "StoreValue('RWD', 1)", true);
+                ScriptManager.RegisterStartupScript(Page, Page.GetType(), "text", "StoreValue('RWD', 1)", true);
             }
             else
             {
-                ScriptManager.RegisterClientScriptBlock(Page, Page.GetType(), "text", "StoreValue('NO', 1)", true);
+                ScriptManager.RegisterStartupScript(Page, Page.GetType(), "text", "StoreValue('NO', 1)", true);
             }
         }
         else
@@ -173,11 +173,11 @@ public partial class _Default : Page
             SwitchPlaceHolder(PlaceHolder6, PlaceHolder7);
             if (Q6DropDownList.SelectedValue == ("1"))
             {
-                ScriptManager.RegisterClientScriptBlock(Page, Page.GetType(), "text", "StoreValue('drifters', 1)", true);
+                ScriptManager.RegisterStartupScript(Page, Page.GetType(), "text", "StoreValue('drifters', 1)", true);
             }
             else
             {
-                ScriptManager.RegisterClientScriptBlock(Page, Page.GetType(), "text", "StoreValue('nonDrifters', 1)", true);
+                ScriptManager.RegisterStartupScript(Page, Page.GetType(), "text", "StoreValue('nonDrifters', 1)", true);
             }
             
         }
@@ -200,7 +200,7 @@ public partial class _Default : Page
             if (carCount == 0)
             {
                 SwitchPlaceHolder(PlaceHolder7, PlaceHolder9);
-                ScriptManager.RegisterClientScriptBlock(Page, Page.GetType(), "text", "StoreValue('ownedBMWs', 0)", true);
+                ScriptManager.RegisterStartupScript(Page, Page.GetType(), "text", "StoreValue('ownedBMWs', 0)", true);
             }
             else if (carCount > 0 && carCount < 20)
             {
